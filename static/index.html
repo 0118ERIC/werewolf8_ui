@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython_stdlib.js"></script>
+<style>
+body { font-family: sans-serif; background:#222; color:white }
+.player { border:1px solid #555; padding:8px; margin:5px; cursor:pointer }
+.dead { opacity:0.3 }
+#players { display:grid; grid-template-columns:repeat(4,1fr) }
+</style>
+</head>
+<body onload="brython()">
+<h1>🐺 狼人殺</h1>
+<input id="name" placeholder="名字"><button id="join">加入</button>
+<button id="start">開始</button>
+<h2 id="phase"></h2>
+<div id="players"></div>
+<div id="actions"></div>
+<script type="text/python" src="main.py"></script>
+</body>
+</html>
